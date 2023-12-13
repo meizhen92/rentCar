@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!-- JSTL -->
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +19,10 @@
 <script type="text/javascript" src="${path}/resources/js/Reservation/reservation.js"></script>
 <script type="text/javascript" src="${path}/resources/js/common/kakaoMap.js"></script>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=${kakaoMapkey}"></script>
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=${kakaoMapkey}&libraries=clusterer"></script>
+<script type="text/javascript"
+	src="//dapi.kakao.com/v2/maps/sdk.js?appkey=${kakaoMapkey}&libraries=clusterer"
+></script>
+
 </head>
 <body>
 	<!-- header,main,footer 로 구성 -->
@@ -31,19 +36,15 @@
 			<div class="mapContainer">
 				<div class="mapInit" id="mapJejudo"></div>
 			</div>
-
-				<div class="reserContainer">
-							<!-- form - data -->
+			<div class="reserContainer">
+				<!-- form - data -->
 				<form id="frmData">
 					<input type="hidden" class="storeChoice" name="storeChoice">
 					<input type="hidden" class="carChoice" name="carChoice">
-					<!-- object 자료형: dayChoiceOut, dayChoiceIn -->
-					<input type="hidden" class="dayChoiceOut" name="dayChoiceOut">
-					<input type="hidden" class="dayChoiceIn" name="dayChoiceIn">
 					<ul>
 						<!-- 1번째 선택 탭 -->
 						<li class="chooseDiv oneChoose">
-							<a>차량대여지점선택</a>
+							<a>차량대여지점선택[클릭]</a>
 							<p class="g num">* 대여,반납 지점 동일 *</p>
 							<ul class="hidden">
 								<c:forEach var="item" items="${selStName}" varStatus="loop">
@@ -51,23 +52,27 @@
 								</c:forEach>
 							</ul>
 						</li>
-						<!-- 3번째 선택 탭 -->
+						<!-- 2번째 선택 탭 -->
 						<li class="chooseDiv twoChoose">
-							<a>대여기간</a>
-							<ul class="hidden">
+							<a value="datepicker" id="datepicker" >대여기간[클릭]</a>
+							<ul >
 								<li>
-									<input class="dateRangePickerInput" type="text" id="datepicker" value="datepicker"></input>
+									대여시작일: <input class="dayChoiceOut" name="dayChoiceOut"></input>
+								</li>
+								<li>
+									대여종료일: <input class="dayChoiceIn" name="dayChoiceIn"></input>
 								</li>
 							</ul>
 						</li>
-						<li id="searchCar">!차량조회하러가자!</li>
-						<!-- 4번째 선택 탭 -->
-						<li>
-							<a id="nextReser">선택한 내용으로 예약 진행하기!</a>
+						<!-- 3번째 차량 선택 모달 -->
+						<li class="chooseDiv" id="searchCar">차량조회하러가자[클릭]</li>
+						<!-- 4번째 예약 상세페이지로 이동 -->
+						<li class="chooseDiv">
+							<a id="nextReser">선택한 내용으로 예약 진행[클릭]</a>
 						</li>
 					</ul>
 				</form>
-<!-- 				form - img
+				<!-- 				form - img
 				<form id="frmImg" enctype="multipart/form-data" method="post">
 					<label for="files">파일 선택 하자</label>
 					<input name="filest" id="files" type="file" onchange="imgPreview(event);">
@@ -106,8 +111,37 @@
 		<%@ include file="../common/footer.jsp"%>
 	</footer>
 </body>
+<script>
+	/*다중 마커 표시용으로 kakaoMap 함수 사용 없이 배열값 마커 위경도로 받기*/
+	var container = document.getElementById("mapJejudo"), option = {
+		center : new kakao.maps.LatLng(33.431441, 126.574237),
+		level : 10
+	};
+	// 지도생성
+	var map = new kakao.maps.Map(container, option);
+	// 배열값 마커 생성을 위해 인덱스 쪼개기
+	var sellati = new Array();
+	<c:forEach var="lati" items="${selStLati}">
+	sellati.push("${lati}");
+	</c:forEach>
+	var sellongi = new Array();
+	<c:forEach var="longi" items="${selStLongi}">
+	sellongi.push("${longi}");
+	</c:forEach>
+	// 다중 마커 표시
+	for (var i = 0; i < sellati.length; i++) {
+		var marker = new kakao.maps.Marker({
+			map : map,
+			position : new kakao.maps.LatLng(sellati[i], sellongi[i])
+		});
+	}
+</script>
 <!-- datepicker.js -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+<script type="text/javascript"
+	src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+></script>
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+/>
 </html>

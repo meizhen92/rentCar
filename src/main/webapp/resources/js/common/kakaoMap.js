@@ -3,15 +3,16 @@
 
 /* script.js */
 // 카카오 지도 api (key 있음)
-// document.write('<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=[tb_secret 참조]"></script>')
+// document.write('<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=${kakaoMapkey}"></script>')
 
 // 지도관련 라이브러리
 //// services: 장소검색, 주소-좌표 변환 (사용 X)
 //// clusterer: 마커 클러스터링 (사용 O)
 //// drawing: 마커와 그래픽스 객체를 쉽게 그릴 수 있게 그리기 모드 지원 (사용 X)
-//// document.write('<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=[tb_secret 참조]&libraries=clusterer"></script>')
+//// document.write('<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=${kakaoMapkey}&libraries=clusterer"></script>')
 
 // 함수 사용: kakaoMap("요소id", 위도(숫자로 우리나라 33~43), 경도(숫자로 우리나라 124~132), 확대레벨(숫자로 1~14), 마커위도, 마커경도)
+// 최초 Map 다중 마커: for문으로 반복하기(include될 js에서 진행)
 function kakaoMap(eleId, lati, longi, level, mlati, mlongi) {
 
 	var container = document.getElementById(eleId),
@@ -23,7 +24,7 @@ function kakaoMap(eleId, lati, longi, level, mlati, mlongi) {
 	var map = new kakao.maps.Map(container, option);
 
 	/* 마커 */
-	// 마커가 표시될 위치
+	// 마커가 표시될 위치(1개)
 	var markerPosition = new kakao.maps.LatLng(mlati, mlongi);
 
 	// 마커 생성

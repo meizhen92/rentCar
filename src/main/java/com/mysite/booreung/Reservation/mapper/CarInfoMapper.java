@@ -11,7 +11,7 @@ import com.mysite.booreung.Reservation.vo.CarInfoVo;
 public interface CarInfoMapper {
 	
 	/* 해당 지역 대리점에 차량 조회 */
-	public List<Map<String, Object>> carList(String store_name);
+	public List<Map<String, Object>> carList(String store_name, String dayChoiceOut, String dayChoiceIn);
 	
 	/* 선택한 차량 상세정보 */
 	public CarInfoVo selCarInfo(String carChoice);

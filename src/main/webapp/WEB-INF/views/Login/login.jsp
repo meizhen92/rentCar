@@ -59,12 +59,8 @@
 										<div class="detail-inputT inputT">
 											<input type="password" name="user_pw" id="user_pw" placeholder="비밀번호">
 										</div>
+										<pre id="outInfo"><c:if test="${loginError ne null}"><c:out value="${loginError }"></c:out></c:if></pre>
 										<button type="button" class="btn btn-default member-login active" id="submitLogin">로그인</button>
-										<pre id="outInfo">
-										<c:if test="${loginError ne null}">
-											<c:out value="${loginError }"></c:out>
-										</c:if>
-									</pre>
 										<div class="detail-search-wrap">
 											<div class="detail-search">
 												<ul class="loginUl">
@@ -92,9 +88,9 @@
 			</div>
 		</form>
 	</div>
-		<!-- footer -->
-		<footer class="footer">
-			<%@ include file="../common/footer.jsp"%>
-		</footer>
+	<!-- footer -->
+	<footer class="footer">
+		<%@ include file="../common/footer.jsp"%>
+	</footer>
 </body>
 </html>

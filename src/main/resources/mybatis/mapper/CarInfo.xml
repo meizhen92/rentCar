@@ -4,13 +4,19 @@
 <mapper
 	namespace="com.mysite.booreung.Reservation.mapper.CarInfoMapper">
 
-	<!-- 해당 지역 대리점에 차량 조회 -->
-	<select id="carList">
+	<!-- 해당 지역 대리점&날짜 차량 조회 -->
+	<select id="carList">		
 		SELECT ca.car_name, ca.car_type, fi.file_name, fi.file_route
 		FROM tb_carinfo AS ca
-		inner JOIN tb_storeinfo AS st on st.store_no = ca.store_no
-		inner JOIN tb_fileinfo AS fi on fi.file_name = ca.car_name
-		WHERE st.store_name = #{store_name} and ca.car_use = "Z"
+			inner JOIN tb_storeinfo AS st on st.store_no = ca.store_no
+			inner JOIN tb_fileinfo AS fi on fi.file_name = ca.car_name
+		WHERE (ca.car_use = "Z")AND(st.store_name = #{store_name})
+	    	AND ca.car_no not IN (SELECT ca.car_no
+		                         FROM tb_carinfo AS ca
+			                         INNER JOIN tb_reservationinfo AS re ON ca.car_no = re.car_no
+			                         AND (#{dayChoiceOut} BETWEEN DATE_FORMAT(re.reser_outdate, '%Y/%m/%d %H:%i') AND DATE_FORMAT(re.reser_indate, '%Y/%m/%d %H:%i'))
+			                         OR (#{dayChoiceIn} BETWEEN DATE_FORMAT(re.reser_outdate, '%Y/%m/%d %H:%i') AND DATE_FORMAT(re.reser_indate, '%Y/%m/%d %H:%i'))
+								);
 	</select>
 
 	<!-- 선택한 차량 상세정보 -->

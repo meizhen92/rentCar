@@ -1,13 +1,9 @@
 /* (/reservation) */
 
 $(document).ready(function() {
-	var sellati = 33.431441;
-	var sellongi = 126.574237;
-	// 카카오맵 공통 함수(webapp/resources/js/common/kakaoMap.js)
-	kakaoMap("mapJejudo", 33.431441, 126.574237, 10, sellati, sellongi);
 
 	// 예약 조건 선택 메뉴 바
-	$(".chooseDiv > a").on('click', function() {
+	$(".oneChoose > a").on('click', function() {
 		// 토글클래스로 하는 방법
 		//$(this).next("ul").toggleClass("hide");
 		// 토글에 슬라이드 효과 주는 방법
@@ -30,7 +26,7 @@ $(document).ready(function() {
 
 		// 현재 클릭한 단어에 스타일 적용
 		if (clickVal === clicktext) {
-			$(this).css({ "background-color": "yellow", "font-weight": "bold" });
+			$(this).css({ "background-color": "skyblue", "font-weight": "bold" });
 			$(".storeChoice").val(clicktext);
 		}
 		console.log(clickVal);
@@ -77,7 +73,7 @@ $(document).ready(function() {
 		"timePicker": true,
 		"timePicker24Hour": true,
 		// 기본 셋팅(현재 시간)
-		autoUpdateInput: true,
+		autoUpdateInput: false,
 		//"startDate": moment().startOf('hour'),
 		//"endDate": moment().startOf('hour').add(32, 'hour'),
 		// 날짜 선택 범위 제한(locale에 설정된 format과 같아야함)
@@ -111,14 +107,12 @@ $(document).ready(function() {
 		// 하루만 선택
 		singleDatePicker: false,
 	},
-		// 선택 한 날짜 포맷터 형식 & form에 hidden값 추가	
+		// 선택 한 날짜 포맷터 형식 & form에 hidden값 추가 및 선택 값 출력
 		function(start, end) {
 			var start = start.format('YYYY/MM/DD HH:mm');
 			var end = end.format('YYYY/MM/DD HH:mm');
-			$(".dayChoiceOut").val(start);
-			$(".dayChoiceIn").val(end);
-			console.log(start);
-			console.log(end);
+			$(".dayChoiceOut").attr('value', start);
+			$(".dayChoiceIn").attr('value', end);
 		}
 	);
 	// daterangepicker button class remove (btn-default css 제거)
@@ -126,19 +120,23 @@ $(document).ready(function() {
 
 	// 차량 조회 모달창 열기(선택가능한 차만 출력)
 	$("#searchCar").on('click', function() {
-		console.log($(".storeChoice").val() + "&&&&&" + $("#datepicker").val());
-		var dayChoice = $("#datepicker").val();
 		var store_name = $(".storeChoice").val();
+		var dayChoiceOut = $(".dayChoiceOut").val();
+		var dayChoiceIn = $(".dayChoiceIn").val();
 		$.ajax({
 			url: "/carList",
 			type: "POST",
 			data: {
-				store_name: store_name
+				store_name: store_name,
+				dayChoiceOut: dayChoiceOut,
+				dayChoiceIn: dayChoiceIn,
 			},
 			success: function(data) {
 				if (data != "" || data != null) {
 					// 배열데이터 반복(li)
 					var loopli = document.getElementById("cars");
+					// 차량 재 조회 시, innerHTML초기화
+					loopli.innerHTML = "";
 					$.each(data.carList, function(index, item) { //index가 끝날때까지
 						console.log("item", item);
 						var result = '';
@@ -146,7 +144,7 @@ $(document).ready(function() {
 						result += item.car_name;
 						imgRoute += item.file_route;
 						loopli.innerHTML += "<li class='loopli'><button class='btnloopli' type=button href='' value='result'>" + result + "</button></li>";
-						loopli.innerHTML += "<li class='loopli'><img src="+ imgRoute +" />" + result + "</li>";
+						loopli.innerHTML += "<li class='loopli'><img src=" + imgRoute + " />" + result + "</li>";
 					})
 					// 차량 선택한거 히든 인풋에 담자(success안에서만 작업 가능)
 					$(".btnloopli").on('click', function() {
@@ -203,27 +201,27 @@ $(document).ready(function() {
 			return true;
 		}
 	})
-	
 
 
-/*	// 사진 업로드
-	$("#btnFrmImg").on('click', function() {
-		$("#frmImg").attr("action", "/upImg")
-		$("#frmImg").submit();
-		return true;
-	})*/
+
+	/*	// 사진 업로드
+		$("#btnFrmImg").on('click', function() {
+			$("#frmImg").attr("action", "/upImg")
+			$("#frmImg").submit();
+			return true;
+		})*/
 
 });  // end-ready
 
 // 사진 미리보기
-function imgPreview(event){
+function imgPreview(event) {
 	var reader = new FileReader();
-	
-	reader.onload = function(event){
+
+	reader.onload = function(event) {
 		var img = document.createElement("img");
 		img.setAttribute("src", event.target.result);
 		document.querySelector("div#imgPreview").appendChild(img);
-		console.log(" e.target.result: "+ event.target.result);
+		console.log(" e.target.result: " + event.target.result);
 	};
 	reader.readAsDataURL(event.target.files[0]);
 }

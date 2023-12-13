@@ -75,22 +75,33 @@ public class ReservationController {
 		List<StoreInfoVo> selStore = storeInfoService.selStore(locaNo);
 		System.out.println("selStore      :     " + selStore);
 
-		// store_name 리스트 담기
+		// store_name, Lati, Longi 리스트 담기
 		List<String> selStName = new ArrayList<>();
+		List<Double> selStLati = new ArrayList<>();
+		List<Double> selStLongi = new ArrayList<>();
 		// selStore 리스트를 순회하면서 StoreInfoVo 객체에 접근하는 방법
 		for (StoreInfoVo storeInfo : selStore) {
 			String storeName = storeInfo.getStore_name();
+			Double storeLati = storeInfo.getStore_lati();
+			Double storeLongi = storeInfo.getStore_longi();
 			selStName.add(storeName);
+			selStLati.add(storeLati);
+			selStLongi.add(storeLongi);
 		}
-		System.out.println("selStName      :     " + selStName);
 
-		model.addAttribute("selStName", selStName);
 		model.addAttribute("kakaoMapkey", kakaoMapkey);
+		model.addAttribute("selStName", selStName);
+		model.addAttribute("selStLati", selStLati);
+		model.addAttribute("selStLongi", selStLongi);
 
 		return "Reservation/reservation13";
 	}
 
-	/* 해당 지역 대리점 위도, 경도 조회(대리점 별 위치 마커 표시용) */
+	/*
+	 * param : selStName
+	 * author : 김미진
+	 * description : 해당 지역 대리점 위도, 경도 조회(대리점 별 위치 마커 표시용)
+	 * */
 	@RequestMapping("/latiLongi")
 	@ResponseBody
 	public Map<String, Object> latiLongi(String selStName) {
@@ -98,8 +109,6 @@ public class ReservationController {
 
 		List<Double> latiLongi = new ArrayList<>();
 		latiLongi = storeInfoService.latiLongi(selStName);
-		System.out.println("selStName      :     " + selStName);
-		System.out.println("latiLongi      :     " + latiLongi);
 
 		Map<String, Object> resultMap = new HashMap<>();
 
@@ -107,16 +116,22 @@ public class ReservationController {
 
 		return resultMap;
 	}
-
-	/* 해당 지역 대리점에 차량 조회 */
+	
+	/*
+	 * param : store_name, dayChoiceOut, dayChoiceIn
+	 * author : 김미진
+	 * description : 해당 지역 대리점&날짜 차량 조회
+	 * */
 	@PostMapping("/carList")
 	@ResponseBody
-	public Map<String, Object> carList(String store_name) {
+	public Map<String, Object> carList(String store_name, String dayChoiceOut, String dayChoiceIn) {
 		System.out.println("-------------------carList : start");
 
-		System.out.println("store_name      :     " + store_name);
+		System.out.println("store_name      :" + store_name);
+		System.out.println("dayChoiceOut      :" + dayChoiceOut);
+		System.out.println("dayChoiceIn      :" + dayChoiceIn);
 
-		List<Map<String, Object>> carList = carInfoService.carList(store_name);
+		List<Map<String, Object>> carList = carInfoService.carList(store_name, dayChoiceOut, dayChoiceIn);
 		System.out.println("carList      :     " + carList);
 
 		Map<String, Object> resultmap = new HashMap<>();
