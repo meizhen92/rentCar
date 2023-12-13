@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper
+	namespace="com.mysite.booreung.Reservation.mapper.StoreInfoMapper">
+	<!-- 해당 지역 대리점만 조회 -->
+	<select id="selStore"
+		resultType="com.mysite.booreung.Reservation.vo.StoreInfoVo">
+		select *
+		from tb_storeinfo as st
+		inner join tb_location as lo ON lo.location_no = st.location_no
+		where st.location_no = #{locaNo}
+	</select>
+	<select id="latiLongi" resultType="java.util.HashMap">
+		select store_lati, store_longi
+		from tb_storeinfo
+		where store_name = #{selStName}
+	</select>
+</mapper>

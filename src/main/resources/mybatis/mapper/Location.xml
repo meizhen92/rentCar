@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mysite.booreung.Reservation.mapper.LocationMapper">
+	<select id="locationList"
+		resultType="com.mysite.booreung.Reservation.vo.LocationVo">
+		select location_no
+		, location_name
+		from tb_location
+		order by cast(location_no as unsigned)
+	</select>
+</mapper>

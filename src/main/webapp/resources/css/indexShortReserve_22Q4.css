@@ -1,0 +1,855 @@
+.main-wrap .main-reserv-visual-wrap {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: end;
+	-webkit-justify-content: flex-end;
+	-moz-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+	position: relative;
+	max-width: 1420px;
+	min-width: 1420px;
+	margin: 0 auto;
+	width: 100%;
+	height: 720px;
+	color: #fff;
+}
+
+
+.main-wrap .main-reserv-visual-wrap .main-visual-slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1050px;
+	height: 100%;
+	background-color: #ccc;
+}
+
+.main-wrap .main-reserv-visual-wrap .main-visual-slide .swiper-pagination-wrap {
+	position: absolute;
+	height: 50px;
+	top: 100px;
+	left: 175px
+}
+
+
+.main-wrap .main-reserv-visual-wrap .main-visual-slide .main-visual-pager {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	font-family: "ManropeB", "NotoB", serif;
+	font-weight: normal;
+	color: #fff;
+	font-size: 14px;
+	width: 250px;
+}
+
+.main-wrap .main-reserv-visual-wrap .main-visual-slide .main-visual-pager .loading-bar {
+	width: 128px;
+	height: 2px;
+	margin: 0 40px 0 10px
+}
+
+.main-wrap .main-reserv-visual-wrap .main-visual-slide .main-visual-pager .loading-ani {
+	display: block;
+	height: 2px;
+	background: #fff
+}
+
+.main-wrap .main-reserv-visual-wrap .main-visual-slide .main-visual-pager button {
+	width: 9px;
+	height: 9px;
+	-webkit-background-size: 100% auto;
+	-moz-background-size: 100% auto;
+	background-size: 100% auto;
+	margin-left: 10px
+}
+
+.main-wrap .main-reserv-visual-wrap .main-visual-slide .main-visual-pager .stop {
+	background: url(/lrhp/pc/images/icons/ico-main-stop.png) 0 0 no-repeat
+}
+
+.main-wrap .main-reserv-visual-wrap .main-visual-slide .main-visual-pager .play {
+	background: url(/lrhp/pc/images/icons/ico-main-play.png) 0 0 no-repeat
+}
+
+.main-wrap .main-reserv-visual-wrap .main-visual-slide .main-visual-list {
+	position: relative;
+	width: 100%;
+	height: 100%
+}
+
+.main-wrap .main-reserv-visual-wrap .main-visual-slide .main-visual-list .main-img-wrap {
+	width: 630px;
+	height: 720px
+}
+
+.main-wrap .main-reserv-visual-wrap .main-visual-slide .main-visual-list .main-img-wrap img {
+	width: 100%;
+	height: auto
+}
+
+.main-wrap .main-reserv-visual-wrap .main-visual-slide .main-visual-list .text-cont {
+	padding-top: 23px;
+	color: #fff
+}
+
+.main-wrap .main-reserv-visual-wrap .main-visual-slide .main-visual-list .text-cont strong {
+	font-family: "ManropeB", "NotoB", serif;
+	font-weight: normal;
+	color: #fff;
+	font-size: 42px;
+	line-height: 1.4
+}
+
+.main-wrap .main-reserv-visual-wrap .main-visual-slide .main-visual-list .text-cont p {
+	font-family: "ManropeR", "NotoR", serif;
+	font-weight: normal;
+	font-size: 22px
+}
+
+.main-wrap .main-reserv-visual-wrap .main-visual-slide .main-visual-list .text-cont .btn-more {
+	font-family: "ManropeB", "NotoB", serif;
+	font-weight: normal;
+	margin-top: 60px;
+	font-size: 14px
+}
+
+.main-wrap .main-reserv-visual-wrap .main-visual-slide .main-visual-list .text-cont .btn-more:after {
+	content: "";
+	display: inline-block;
+	width: 10px;
+	height: 14px;
+	margin-left: 5px;
+	background: url(/lrhp/pc/images/icons/ico-main-arrow.png) 0 0 no-repeat;
+	-webkit-background-size: 100% auto;
+	-moz-background-size: 100% auto;
+	background-size: 100% auto;
+	vertical-align: middle
+}
+
+.main-wrap .main-reserv-visual-wrap .main-visual-slide .main-visual-list .slide-img {
+	position: absolute;
+	right: 0;
+	bottom: 30px;
+	width: 307px;
+	height: 270px
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking {
+	width: 420px;
+	/* height: 100%; */
+	height: 720px;
+	/* background: #333; */
+	z-index: 2;
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking h2 {
+	font-family: "ManropeB", "NotoB", serif;
+	font-weight: normal;
+	font-size: 22px;
+	padding-left: 5px
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking h2:before {
+	content: "";
+	display: inline-block;
+	width: 25px;
+	height: 24px;
+	margin-right: 10px;
+	-webkit-background-size: 100% auto;
+	-moz-background-size: 100% auto;
+	background-size: 100% auto;
+	vertical-align: text-top;
+	background: url(https://lotterentacar.net/lrhp/pc/images/icons/ico-main-branch.png) 0 0 no-repeat;
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking .btn-link {
+	border: 0 none;
+	color: #aaa;
+	height: 50px;
+	padding: 0 0 0 5px;
+	text-align: left;
+	line-height: 1.4;
+	font-size: 16px;
+	font-family: "ManropeR", "NotoR", serif;
+	font-weight: normal
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking .btn-link b {
+	color: #aaa;
+	font-size: 16px;
+	line-height: 1
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking .btn-link.active {
+	font-family: "ManropeB", "NotoB", serif;
+	font-weight: normal
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking .btn-link.active:after {
+	display: inline-block;
+	content: "";
+	background: url(/lrhp/pc/images/icons/ico-check3-on.png) 0 0 no-repeat;
+	width: 14px;
+	height: 11px;
+	margin-left: 10px;
+	-webkit-background-size: 100% auto;
+	-moz-background-size: 100% auto;
+	background-size: 100% auto
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking .btn-link.active b {
+	border-bottom: 1px solid #fff;
+	color: #fff;
+	font-size: 16px
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar {
+	padding: 50px 0 35px 30px;
+	-webkit-border-radius: 50px 0 0 0;
+	-moz-border-radius: 50px 0 0 0;
+	border-radius: 50px 0 0 0
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar h2:before {
+	background: url(/lrhp/pc/images/icons/ico-main-calendar.png) 0 0 no-repeat
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar .main-calender-wrap {
+	height: 585px;
+	overflow: hidden
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar .main-calender-wrap>div {
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 570px
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar .tbl-box .calendar-tit {
+	font-family: "ManropeB", "NotoB", serif;
+	font-weight: normal;
+	font-size: 20px;
+	padding: 15px 10px
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar .tbl-box table {
+	width: 100%
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar .tbl-box table th,
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar .tbl-box table td {
+	text-align: center;
+	padding: 13px 0;
+	color: #aaa
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar .tbl-box table th {
+	padding-top: 0
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar .tbl-box table .btn {
+	width: 38px;
+	height: 38px;
+	padding: 0;
+	color: #aaa
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar .tbl-box table .disabled,
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar .tbl-box table .disabled>button,
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar .tbl-box table button[disabled] {
+	color: #494949
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar .tbl-box table .today .btn {
+	width: 38px;
+	background-color: #717171;
+	-webkit-border-radius: 1.7rem;
+	-moz-border-radius: 1.7rem;
+	border-radius: 1.7rem;
+	font-family: "ManropeB", "NotoB", serif;
+	font-weight: normal;
+	color: #fff
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar .tbl-box table .today.on .btn:after,
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar .tbl-box table .today.start .btn:after,
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar .tbl-box table .today.end .btn:after,
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar .tbl-box table .today.during .btn:after {
+	background-color: #fff
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar .tbl-box table .start .btn,
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar .tbl-box table .end .btn,
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar .tbl-box table .during .btn {
+	width: 100%;
+	color: #fff;
+	background-color: #ff404b
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar .tbl-box table .start .btn {
+	-webkit-border-top-left-radius: 38px;
+	-moz-border-radius-topleft: 38px;
+	border-top-left-radius: 38px;
+	-webkit-border-bottom-left-radius: 38px;
+	-moz-border-radius-bottomleft: 38px;
+	border-bottom-left-radius: 38px
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar .tbl-box table .start.today .btn {
+	-webkit-border-top-right-radius: 0;
+	-moz-border-radius-topright: 0;
+	border-top-right-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	-moz-border-radius-bottomright: 0;
+	border-bottom-right-radius: 0
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar .tbl-box table .end .btn {
+	-webkit-border-top-right-radius: 38px;
+	-moz-border-radius-topright: 38px;
+	border-top-right-radius: 38px;
+	-webkit-border-bottom-right-radius: 38px;
+	-moz-border-radius-bottomright: 38px;
+	border-bottom-right-radius: 38px
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar .tbl-box table .on .btn {
+	color: #fff;
+	background-color: #ff404b;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.calendar .tbl-box table .day .btn {
+	width: 38px;
+	background-color: #ff404b;
+	-webkit-border-radius: 1.7rem;
+	-moz-border-radius: 1.7rem;
+	border-radius: 1.7rem;
+	font-family: "ManropeB", "NotoB", serif;
+	font-weight: normal;
+	color: #fff
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking-branch {
+	border-top-left-radius: 50px;
+	padding: 50px 10px 0px 30px;
+	height: 640px;
+	background: #242424
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking .section-visual-booking-branch .mCSB_inside>.mCSB_container {
+	margin-right: 0
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking .section-visual-booking-branch .m-tit {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-moz-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .m-tit .btn-red {
+	font-size: 12px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	height: 25px;
+	width: 70px;
+	margin-right: 5px
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .m-tit .inputC {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-moz-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	margin-right: 15px
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .m-tit .inputC label {
+	line-height: 1
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .m-tit .inputC label:before {
+	background: url(/lrhp/pc/images/icons/ico-check3-off.png) 0 0 no-repeat;
+	width: 14px;
+	height: 11px
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .m-tit .inputC label span {
+	font-size: 16px;
+	color: #bbb;
+	font-family: "ManropeR", "NotoR", serif;
+	font-weight: normal
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .m-tit .inputC input:checked+label:before {
+	background: url(/lrhp/pc/images/icons/ico-check3-on.png) 0 0 no-repeat
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .m-tit .inputC input:checked+label span {
+	color: #fff
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch h2:before {
+	height: 27px;
+	background: url(https://lotterentacar.net/lrhp/pc/images/icons/ico-main-branch.png) 0 0 no-repeat
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .shor-main-toggle-cont {
+	position: relative;
+	overflow: hidden;
+	padding: 0;
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .shor-main-toggle-cont .shor-main-toggle-txt {
+	line-height: 1.4;
+	font-size: 16px;
+	overflow: hidden
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .shor-main-toggle-cont .shor-main-list-tit {
+	padding: 35px 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-moz-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .shor-main-toggle-cont .shor-main-list-tit .iconList {
+	border: 0 none;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .shor-main-toggle-cont .shor-main-list-tit .iconList li {
+	padding-right: 5px
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .shor-main-toggle-cont .shor-main-list-tit .iconList li label {
+	width: 110px;
+	height: 40px;
+	background: #242424;
+	border: 1px solid #666;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	font-size: 18px;
+	font-family: "ManropeR", "NotoR", serif;
+	font-weight: normal;
+	color: #ddd
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .shor-main-toggle-cont .shor-main-list-tit .iconList li input:checked+label {
+	background: #ff404b;
+	border-color: #ff404b;
+	font-family: "ManropeB", "NotoB", serif;
+	font-weight: normal;
+	color: #fff
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .shor-main-toggle-cont .shor-main-list-tit .iconList li input:disabled+label {
+	background: #242424;
+	border-color: #444;
+	font-family: "ManropeB", "NotoB", serif;
+	font-weight: normal;
+	color: #4d4e4e
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .shor-main-toggle-cont .shor-main-list-branch {
+	display: none
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .shor-main-toggle-cont .shor-main-list-branch .short-branch-tab2 {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .shor-main-toggle-cont .shor-main-list-branch .short-branch-tab2 li {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-moz-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	height: 20px
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .shor-main-toggle-cont .shor-main-list-branch .short-branch-tab2 li button {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-moz-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 16px;
+	color: #aaa;
+	margin: 0 5px
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .shor-main-toggle-cont .shor-main-list-branch .short-branch-tab2 li.active button {
+	border-bottom: 1px solid #ce8d57;
+	font-family: "ManropeB", "NotoB", serif;
+	font-weight: normal;
+	color: #ce8d57
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .shor-main-toggle-cont .shor-main-list-branch .short-branch-tab2 li label {
+	border: 0 none;
+	background: #242424;
+	font-size: 16px;
+	font-family: "ManropeR", "NotoR", serif;
+	font-weight: normal;
+	color: #aaa;
+	height: auto;
+	margin: 0.9rem 0 .9rem 0
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .shor-main-toggle-cont .shor-main-list-branch .short-branch-tab2 li input:checked+label {
+	border-bottom: 1px solid #ce8d57;
+	font-family: "ManropeB", "NotoB", serif;
+	font-weight: normal;
+	color: #ce8d57
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .shor-main-toggle-cont .shor-main-list-branch .short-branch-tab2 li:nth-of-type(2):before {
+	display: inline-block;
+	content: "";
+	border-right: 1px solid #aaa;
+	height: 50%;
+	width: 1px;
+	margin: 0 5px
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .shor-main-toggle-cont .shor-main-list-wrap {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .shor-main-toggle-cont .shor-main-list-wrap .shor-main-list-lt {
+	height: 385px;
+	width: 50%;
+	padding: 5px 0 5px 5px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .shor-main-toggle-cont .shor-main-list-wrap .shor-main-list-lt>div {
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 385px;
+	width: 100%
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .shor-main-toggle-cont .shor-main-list-wrap .shor-main-list-lt ul {
+	/* width: 100% */
+
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .shor-main-toggle-cont .shor-main-list-wrap .shor-main-list-rt {
+	height: 385px;
+	width: 50%;
+	padding: 5px 0 5px 5px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.section-visual-booking .section-visual-booking-branch .shor-main-toggle-cont .shor-main-list-wrap .shor-main-list-rt>div {
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 385px;
+	width: 100%
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.time {
+	padding: 50px 30px 35px 30px;
+	width: 260px
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.time .m-time h2:before {
+	height: 30px;
+	width: 30px;
+	background: url(/lrhp/pc/images/icons/ico-main-time.png) 0 0 no-repeat
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.time .m-car h2:before {
+	height: 30px;
+	width: 30px;
+	background: url(/lrhp/pc/images/icons/ico-main-car.png) 0 0 no-repeat
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.time .car-list ul {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-top: 10px
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.time .car-list ul li {
+	width: 50%
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.time .time-list p {
+	padding: 30px 0 5px;
+	font-size: 14px;
+	color: #fff
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.time .m-car {
+	margin-top: 50px
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.time .selection-cont {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-moz-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	border-bottom: 1px solid #666
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking.time .selection-cont .selectbox {
+	border: none;
+	background: url(/lrhp/pc/images/icons/ico-arrow-down2.png) center right no-repeat;
+	height: 35px;
+	width: 40%;
+	padding: 0 5px;
+	color: #aaa;
+	font-size: 16px
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking-btn {
+	height: 80px;
+	background-color: #434343;
+	color: #A9A9A9;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 50px;
+	font-size: 1.1rem;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking-btn span {
+	margin: auto 0;
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking-btn.active {
+	background-color: #ec1b24;
+	color: #fff;
+}
+
+.main-wrap .booking-icon:after {
+	display: inline-block;
+	content: '';
+	width: 11px;
+	height: 18px;
+	background: url(/lrhp/pc/images/icons/ico-main-arrow2.png) 0 0 no-repeat;
+	-webkit-background-size: center auto;
+	-moz-background-size: center auto;
+	background-size: center auto
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking-branch .btn-reserv-jeju {
+	width: 100%;
+	padding: 1rem 0.5rem 1rem 1.5rem;
+	border-bottom: solid 2px #fff;
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking-branch .btn-reserv-jeju button {
+	width: 100%;
+	text-align: left;
+	font-size: 1.25rem;
+	border: solid 4px #fff;
+	border-radius: 30px;
+	padding: 1rem 2rem;
+	margin: 1rem 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking-branch .btn-reserv-jeju span.reserv-arrow {
+	display: inline-block;
+	content: '';
+	width: 10px;
+	height: 18px;
+	background: url(/lrhp/mo/images/icons/ico-arrow-left.png) 0 0 no-repeat;
+	-webkit-background-size: center auto;
+	-moz-background-size: center auto;
+	background-size: cover
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking-branch .branch-info {
+	display: flex;
+	justify-content: center;
+	margin: 10px 0;
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking-branch .branch-info .icon-branch {
+	display: inline-block;
+	content: '';
+	width: 20px;
+	height: 20px;
+	background: url(/lrhp/pc/images/icons/ico-marker1.png) 0 0 no-repeat;
+	-webkit-background-size: center auto;
+	-moz-background-size: center auto;
+	background-size: cover;
+	margin-top: 1px;
+	margin-right: 5px;
+}
+
+li.second-region>span {
+	display: inline-block;
+	content: '';
+	width: 20px;
+	height: 20px;
+	background: url(/lrhp/pc/images/icons/ico-marker1.png) 0 0 no-repeat;
+	-webkit-background-size: center auto;
+	-moz-background-size: center auto;
+	background-size: cover;
+	position: absolute;
+	right: 30px;
+	margin-top: 16px;
+}
+
+.main-wrap .main-reserv-visual-wrap .section-visual-booking-branch .branch-info .icon-branch7 {
+	display: inline-block;
+	content: '';
+	width: 25px;
+	height: 25px;
+	background: url(/lrhp/pc/images/icons/ico-marker7.png) 0 0 no-repeat;
+	-webkit-background-size: center auto;
+	-moz-background-size: center auto;
+	background-size: cover;
+	margin-top: 1px;
+	margin-right: 5px;
+}
+
+li.second-region>span.icon-branch7 {
+	display: inline-block;
+	content: '';
+	width: 25px;
+	height: 25px;
+	background: url(/lrhp/pc/images/icons/ico-marker7.png) 0 0 no-repeat;
+	-webkit-background-size: center auto;
+	-moz-background-size: center auto;
+	background-size: cover;
+	position: absolute;
+	right: 27px;
+	margin-top: 13px;
+}
+
+.shor-main-list-lt b {
+	font-family: "SpoqaB", serif;
+}

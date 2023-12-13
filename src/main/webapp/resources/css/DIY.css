@@ -1,0 +1,359 @@
+/**/
+/* 내가 추가하는 css 목록입니당 */
+/**/
+
+#mainDiv {
+	width: 1430px;
+	height: 690px;
+	display: flex;
+	justify-content: right;
+}
+
+/* 로그인&header&마이페이지 화면 양식 */
+
+.loginContatiner {
+	box-sizing: border-box;
+	width: 50%;
+	padding: 100px 25px;
+	border: 1px solid #EBEBEB;
+	margin-left: 25%;
+}
+
+.loginContatiner>.pop-inner {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.loginUl {
+	margin: 4% center;
+}
+
+.loginLi {
+	display: inline-block;
+}
+
+#toggleLogin {
+	cursor: default;
+	text-align: right;
+	margin-right: 3%;
+}
+
+.btnLoginC {
+	cursor: pointer;
+	background-color: rgb(227, 227, 227);
+	color: rgb(219, 0, 0);
+	font-weight: bold;
+	border-radius: 20%;
+}
+
+.mypageDelete {
+	display: flex;
+	justify-content: space-between;
+	/*수평정렬*/
+}
+
+.updateUserForm {
+	width: 80%;
+	margin: 3% auto;
+}
+
+#submitLogin {
+	width: 50%;
+	margin: 3% 0% 3% 45%;
+}
+
+/* 마이페이지 모달 창 */
+.deleteUserModal,
+.modal-carList {
+	display: none;
+}
+
+.Modal-bg {
+	/* 전체 배경 css */
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 999;
+}
+
+.deleteUserModal-wrap {
+	/* 팝업 내용 부분 css */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 50%;
+	height: 30%;
+	background: rgb(229, 229, 229);
+	z-index: 1000;
+}
+
+.deleteUserModal-wrap>p {
+	height: 30px;
+	text-align: center;
+	font-size: 1.5em;
+	margin: 8% 0 5% 0;
+}
+
+.deleteUserModal-wrap>button {
+	height: 15%;
+	width: 20%;
+	background-color: rgb(229, 229, 229);
+	border: 1px solid rgb(188, 3, 54);
+	color: rgb(188, 3, 54);
+	font-size: 1.3em;
+	margin-left: 20%;
+	display: inline-block;
+}
+
+/* 회원가입 화면 양식 */
+
+div.create {
+	width: 800px;
+	text-align: center;
+	padding: 30px;
+	border-bottom: 1px solid black;
+	margin: auto;
+}
+
+.insert>table {
+	height: 300px;
+	width: 900px;
+	border-top: 3px solid rgb(128, 128, 128);
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.insert>table>tbody>tr>td {
+	border-bottom: 1px dotted rgb(128, 128, 128);
+}
+
+.joinTitle {
+	font-size: 2.5em;
+	text-align: center;
+	margin-top: 7%;
+	margin-bottom: 3%;
+}
+
+.col1 {
+	background-color: #e8e8e8;
+	padding: 1.4%;
+	text-align: right;
+	font-size: 1.1em;
+}
+
+.col2 {
+	text-align: left;
+	padding: 5px;
+}
+
+.inputSize {
+	width: 40%;
+}
+
+.dateRangePickerInput {
+	width: 100%;
+}
+
+td>span {
+	font-size: 1em;
+	text-align: left;
+}
+
+.but1 {
+	height: 25px;
+	width: 80px;
+	color: black;
+	background-color: #b9b9b9;
+}
+
+.but2 {
+	height: 27px;
+	width: 120px;
+	color: black;
+	background-color: #b9b9b9;
+}
+
+.but3 {
+	height: 35px;
+	width: 150px;
+	background-color: white;
+	border: 2px solid #b9b9b9;
+}
+
+.but4 {
+	height: 35px;
+	width: 150px;
+	background-color: white;
+	border: 2px solid #b9b9b9;
+}
+
+.but1:hover {
+	background-color: rgb(245, 184, 169);
+	;
+	color: black;
+	border: 1px solid #b9b9b9;
+}
+
+.but2:hover {
+	background-color: rgb(245, 184, 169);
+	;
+	color: black;
+	border: 1px solid #b9b9b9;
+}
+
+.but3:hover {
+	background-color: black;
+	color: white;
+	border: 2px solid black;
+}
+
+.but4:hover {
+	background-color: black;
+	color: white;
+	border: 2px solid black;
+}
+
+.col2>p {
+	font-size: 0.8em;
+	margin-top: 1%;
+}
+
+.g {
+	font-size: 0.7em;
+}
+
+.c {
+	font-size: 0.7em;
+}
+
+.a {
+	font-size: 0.7em;
+}
+
+.num,
+#outInfo {
+	color: red;
+	white-space: pre-wrap;
+}
+
+.insert select {
+	box-shadow: 1px 1px 2px rgb(255, 140, 140);
+	border: 1px solid #ccc;
+	/* 테두리 스타일 */
+	border-radius: 4px;
+	/* 테두리 둥글게 만들기 */
+	background-color: #fff;
+	/* 배경 색상 */
+}
+
+/* 메인 화면 양식 */
+.mainChoosePhoto {
+	width: 70%;
+	height: 100%;
+}
+
+.mainChoose {
+	/* 대여 장소 선택 가장 바깥 설정 */
+	width: 30%;
+	height: 100%;
+	overflow: auto;
+	-ms-overflow-style: none;
+}
+
+.mainChoose::-webkit-scrollbar {
+	display: none;
+}
+
+.m-tit>h2,
+.btn-reserv-jeju {
+	/* 단기렌터카 div */
+	height: 30px;
+	font-size: 22px;
+	text-align: center;
+	padding: 1%;
+	background-color: rgba(215, 181, 244, 0.7);
+	font-weight: 900;
+}
+
+.btn-reserv-jeju button {
+	/* 제주예약 div */
+	border: none;
+	font-size: 19px;
+	text-align: center;
+	background-color: rgb(233, 213, 249);
+}
+
+.shor-main-list-wrap {
+	/* 대여 장소 2줄로 만들기 */
+	display: flex;
+	text-align: center;
+}
+
+.shor-main-list-lt {
+	width: 50%;
+	overflow-y: auto;
+}
+
+.shor-main-list-rt {
+	width: 50%;
+	overflow-y: auto;
+}
+
+/* Reservation 페이지 */
+
+#mainJeju {
+	width: 1000x;
+	height: 690px;
+}
+
+.totalContainer {
+	width: 100%;
+	height: 99%;
+	display: flex;
+	/*justify-content: center;*/
+}
+
+.mapContainer {
+	width: 60%;
+	height: 96%;
+}
+
+.mapInit {
+	/* 지도 크기 설정(필수) */
+	width: 100%;
+	height: 100%;
+}
+
+.imgPreview {
+	width: 300px;
+	height: 300px;
+}
+
+.drp-buttons>button {
+	margin-left: 8px;
+	font-size: 12px;
+	font-weight: bold;
+	height: 50%;
+	box-shadow: 0 0px 15px #b9b9b9;
+}
+
+.chooseDiv>.hidden {
+	display: none;
+}
+
+.carListModal-wrap {
+	/* 팝업 내용 부분 css */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 70%;
+	height: 70%;
+	background: rgb(229, 229, 229);
+	z-index: 1000;
+}

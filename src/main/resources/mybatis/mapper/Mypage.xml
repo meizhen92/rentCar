@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 네임스페이스로 유일한 아이디 만듦 -->
+<mapper
+	namespace="com.mysite.booreung.Mypage.mapper.MypageMapper">
+	<!-- 회원정보 조회 -->
+	<!-- id는 필수속성(네임스페이스안에서만 안겹치면됨), parameterType: 외부로부터 데이터를 받아옴 resultType: 
+		리턴된 resultSet을 어떤 자바 객체에 매핑할지 지정할 때 사용 -->
+	<select id="selectUser"
+		resultType="com.mysite.booreung.Mypage.vo.MypageVo">
+		select user.user_no
+		, user.user_id
+		, user.user_pw
+		, user.user_name
+		, user.user_addr
+		, user.user_addrdt
+		, user.user_postcode
+		, user.user_phone
+		, user.user_email
+		, user.user_secession
+		from tb_userinfo user
+		where user.user_id = #{user_id} and user.user_secession = 'N'
+	</select>
+
+	<!-- 회원정보 수정(업데이트) -->
+	<update id="updateUser">
+		update tb_userinfo
+		set
+		user_name = #{user_name}
+		, user_addr = #{user_addr}
+		, user_addrdt = #{user_addrdt}
+		, user_postcode = #{user_postcode}
+		, user_phone = #{user_phone}
+		, user_email = #{user_email}
+		where user_id = #{user_id}
+	</update>
+
+	<!-- 회원 정보 삭제 'Y' 업데이트 -->
+	<update id="deleteUser">
+		update tb_userinfo
+		set
+		user_secession = 'Y'
+		where user_id = #{user_id}
+	</update>
+
+</mapper>

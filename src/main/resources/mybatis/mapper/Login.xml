@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mysite.booreung.Login.mapper.LoginMapper">
+
+
+	<select id="loginUser" resultType="com.mysite.booreung.Login.vo.LoginVo">
+		select user.user_id
+		, user.user_pw
+		, user.user_name
+		, user.user_phone
+		, user.user_secession
+		from tb_userinfo user
+		where user.user_id = #{user_id} and user.user_secession = 'N'
+	</select>
+</mapper>
