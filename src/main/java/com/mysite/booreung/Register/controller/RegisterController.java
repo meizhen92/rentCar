@@ -99,7 +99,7 @@ public class RegisterController {
 		String passwordChange = passwordEncoder.encode(registerVo.getUser_pw());
 		registerVo.setUser_pw(passwordChange);
 
-		// model 객체에 없는 값 para 로 가져와 email 값 완전체 만들기
+		// model 객체에 없는 값 para 로 가져와 email 값 완전체 만들기(태인)
 		String mailId = (String) para.get("mailid");
 		String domain = (String) para.get("domain");
 		String user_email = mailId + "@" + domain;

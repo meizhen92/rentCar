@@ -12,7 +12,8 @@ public class FileInfoService {
 	@Autowired
 	FileInfoMapper fileInfoMapper;
 	
-	public void insertFileInfo(FileInfoVo fileInfoVo) {
+	public void insertFileInfo(FileInfoVo fileInfoVo){
+		
 		fileInfoMapper.insertFileInfo(fileInfoVo);
 	}
 	

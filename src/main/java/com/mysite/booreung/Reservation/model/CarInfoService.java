@@ -16,7 +16,7 @@ public class CarInfoService {
 	CarInfoMapper carInfoMapper;  
 	
 	/* 해당 지역 대리점에 차량 조회 */
-	public List<Map<String, Object>> carList(String store_name, String dayChoiceOut, String dayChoiceIn) {
+	public List<Map<String, String>> carList(String store_name, String dayChoiceOut, String dayChoiceIn) {
 		return carInfoMapper.carList(store_name, dayChoiceOut, dayChoiceIn);
 	}
 	

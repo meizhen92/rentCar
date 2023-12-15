@@ -14,8 +14,8 @@
 	    	AND ca.car_no not IN (SELECT ca.car_no
 		                         FROM tb_carinfo AS ca
 			                         INNER JOIN tb_reservationinfo AS re ON ca.car_no = re.car_no
-			                         AND (#{dayChoiceOut} BETWEEN DATE_FORMAT(re.reser_outdate, '%Y/%m/%d %H:%i') AND DATE_FORMAT(re.reser_indate, '%Y/%m/%d %H:%i'))
-			                         OR (#{dayChoiceIn} BETWEEN DATE_FORMAT(re.reser_outdate, '%Y/%m/%d %H:%i') AND DATE_FORMAT(re.reser_indate, '%Y/%m/%d %H:%i'))
+			                     where (DATE_FORMAT(re.reser_outdate, '%Y/%m/%d %H:%i') BETWEEN #{dayChoiceOut} AND #{dayChoiceIn})
+			                         OR (DATE_FORMAT(re.reser_indate, '%Y/%m/%d %H:%i') BETWEEN #{dayChoiceOut} AND #{dayChoiceIn})
 								);
 	</select>
 

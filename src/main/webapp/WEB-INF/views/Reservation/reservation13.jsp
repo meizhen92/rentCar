@@ -54,13 +54,15 @@
 						</li>
 						<!-- 2번째 선택 탭 -->
 						<li class="chooseDiv twoChoose">
-							<a value="datepicker" id="datepicker" >대여기간[클릭]</a>
-							<ul >
+							<a value="datepicker" id="datepicker">대여기간[클릭]</a>
+							<ul>
 								<li>
-									대여시작일: <input class="dayChoiceOut" name="dayChoiceOut"></input>
+									대여시작일:
+									<input class="dayChoiceOut" name="dayChoiceOut" readonly></input>
 								</li>
 								<li>
-									대여종료일: <input class="dayChoiceIn" name="dayChoiceIn"></input>
+									대여종료일:
+									<input class="dayChoiceIn" name="dayChoiceIn" readonly></input>
 								</li>
 							</ul>
 						</li>
@@ -72,13 +74,15 @@
 						</li>
 					</ul>
 				</form>
-				<!-- 				form - img
+<!-- 				
+				form - img
 				<form id="frmImg" enctype="multipart/form-data" method="post">
 					<label for="files">파일 선택 하자</label>
 					<input name="filest" id="files" type="file" onchange="imgPreview(event);">
 					<button type="button" id="btnFrmImg">파일업로드</button>
 					<div class="imgPreview" id="imgPreview">div영역</div>
-				</form> -->
+				</form>
+				 -->
 			</div>
 			<!-- 차량 선택 모달창 -->
 			<div class="modal-carList">

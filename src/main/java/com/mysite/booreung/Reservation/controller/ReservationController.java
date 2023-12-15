@@ -42,10 +42,13 @@ public class ReservationController {
 
 	@Autowired
 	FileInfoService fileInfoService;
-	
+
 	@Value("${kakaoMapkey}")
-	String kakaoMapkey;
-	
+	private String kakaoMapkey;
+
+	@Value("${fileUpload.rootPath}")
+	private String rootPath;
+
 	/*
 	 * param : locaNo
 	 * author : 김미진
@@ -61,7 +64,7 @@ public class ReservationController {
 
 		return resultMap;
 	}
-	
+
 	/*
 	 * param : locaNo
 	 * author : 김미진
@@ -71,7 +74,7 @@ public class ReservationController {
 	public String reservation13(Model model, @RequestParam(name = "locaNo") String locaNo) {
 		System.out.println("-------------------reservation13 : start");
 		System.out.println("locaNo      :     " + locaNo);
-		
+
 		List<StoreInfoVo> selStore = storeInfoService.selStore(locaNo);
 		System.out.println("selStore      :     " + selStore);
 
@@ -116,7 +119,7 @@ public class ReservationController {
 
 		return resultMap;
 	}
-	
+
 	/*
 	 * param : store_name, dayChoiceOut, dayChoiceIn
 	 * author : 김미진
@@ -124,15 +127,15 @@ public class ReservationController {
 	 * */
 	@PostMapping("/carList")
 	@ResponseBody
-	public Map<String, Object> carList(String store_name, String dayChoiceOut, String dayChoiceIn) {
+	public Map<String, Object> carList(String store_name, String dayChoiceOut, String dayChoiceIn,
+			CarInfoVo carInfoVo) throws Exception {
 		System.out.println("-------------------carList : start");
 
-		System.out.println("store_name      :" + store_name);
-		System.out.println("dayChoiceOut      :" + dayChoiceOut);
-		System.out.println("dayChoiceIn      :" + dayChoiceIn);
-
-		List<Map<String, Object>> carList = carInfoService.carList(store_name, dayChoiceOut, dayChoiceIn);
+		// tb_carinfo 와 tb_fileinfo의 정보를 return하므로 Map으로 받아야하고 인스턴스가 복수라 List로 받기
+		List<Map<String, String>> carList = carInfoService.carList(store_name, dayChoiceOut, dayChoiceIn);
 		System.out.println("carList      :     " + carList);
+		// 업로드 이미지 출력하기
+		//List<FileInfoVo> flst = .getFiles();
 
 		Map<String, Object> resultmap = new HashMap<>();
 		resultmap.put("carList", carList);
@@ -184,28 +187,30 @@ public class ReservationController {
 
 	/* 사진 업로드 */
 	@PostMapping("/upImg")
-	public String upImg(HttpServletRequest request, @RequestParam("filest") MultipartFile file, FileInfoVo fileInfoVo) {
+	public String upImg(HttpServletRequest request, @RequestParam("filest") MultipartFile file, FileInfoVo fileInfoVo)
+			throws Exception {
 		System.out.println("-------------------upImg : start");
-		System.out.println("절경 -------- " + request.getSession().getServletContext().getRealPath("/"));
-
+		
+		int serviceReturn = 0;
 		if (file != null && !file.isEmpty()) {
 			// 로컬에 저장할 폴더 만들기
-			String realPath = "C:\\01_GBSBP\\Study_SpringBoot\\Img\\booreung\\tempStorage";
 			String today = new SimpleDateFormat("yyMMdd").format(new Date());
-			String saveFolder = realPath + File.separator + today;
+			String saveFolder = rootPath + File.separator + today;
 			File folder = new File(saveFolder);
 			if (!folder.exists()) {
 				folder.mkdirs();
 			}
-			// 파일 정보 모델에 넣기
+			// 파일 서버 저장
 			String filechar = file.getOriginalFilename();
+			File filePath = new File(folder + File.separator + filechar);
+			file.transferTo(filePath);
+
+			// 파일 정보 모델에 넣기
 			int num = filechar.lastIndexOf(".");
-			String physiPathFol = "C:\\01_GBSBP\\Study_SpringBoot\\Img\\booreung";
-			String physiPathFi = physiPathFol + File.separator + filechar;
+			String physiPathFi = saveFolder + File.separator + filechar;
 
 			String fileName = filechar.substring(0, num).trim();
 			String fileEx = filechar.substring(num + 1, filechar.length());
-			String fileRt = saveFolder;
 			Long fileSize = file.getSize();
 
 			fileInfoVo.setFile_name(fileName);

@@ -204,12 +204,12 @@ $(document).ready(function() {
 
 
 
-	/*	// 사진 업로드
+		// 사진 업로드
 		$("#btnFrmImg").on('click', function() {
 			$("#frmImg").attr("action", "/upImg")
 			$("#frmImg").submit();
 			return true;
-		})*/
+		})
 
 });  // end-ready
 

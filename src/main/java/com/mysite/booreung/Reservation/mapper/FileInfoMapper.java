@@ -4,6 +4,8 @@ import org.apache.ibatis.annotations.Mapper;
 
 import com.mysite.booreung.Reservation.vo.FileInfoVo;
 
+import jakarta.servlet.http.HttpServletRequest;
+
 @Mapper
 public interface FileInfoMapper {
 	

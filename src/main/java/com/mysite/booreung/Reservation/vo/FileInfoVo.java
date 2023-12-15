@@ -1,5 +1,7 @@
 package com.mysite.booreung.Reservation.vo;
 
+import java.util.List;
+
 public class FileInfoVo {
 
 	private Integer file_no;
@@ -7,15 +9,16 @@ public class FileInfoVo {
 	private String file_extension;
 	private String file_route;
 	private Long file_size;
+	private List<UploadFIle> imageFiles;
 
-	public FileInfoVo(Integer file_no, String file_name, String file_extension, String file_route, Long file_size) {
-		super();
-		this.file_no = file_no;
-		this.file_name = file_name;
-		this.file_extension = file_extension;
-		this.file_route = file_route;
-		this.file_size = file_size;
-	}
+	/*	public FileInfoVo(Integer file_no, String file_name, String file_extension, String file_route, Long file_size) {
+			super();
+			this.file_no = file_no;
+			this.file_name = file_name;
+			this.file_extension = file_extension;
+			this.file_route = file_route;
+			this.file_size = file_size;
+		}*/
 
 	public Integer getFile_no() {
 		return file_no;
@@ -57,9 +60,17 @@ public class FileInfoVo {
 		this.file_size = file_size;
 	}
 
-	@Override
-	public String toString() {
-		return "FileInfoVo [file_no=" + file_no + ", file_name=" + file_name + ", file_extension=" + file_extension
-				+ ", file_route=" + file_route + ", file_size=" + file_size + "]";
+	public List<UploadFIle> getImageFiles() {
+		return imageFiles;
 	}
+
+	public void setImageFiles(List<UploadFIle> imageFiles) {
+		this.imageFiles = imageFiles;
+	}
+
+	/*	@Override
+		public String toString() {
+			return "FileInfoVo [file_no=" + file_no + ", file_name=" + file_name + ", file_extension=" + file_extension
+					+ ", file_route=" + file_route + ", file_size=" + file_size + "]";
+		}*/
 }
